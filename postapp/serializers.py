@@ -12,7 +12,7 @@ class PostSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['id', 'title', 'description', 'text', 'author', 'comments']
+        fields = ['id', 'title', 'created_at', 'description', 'text', 'author', 'comments']
 
 
 class CommentSerializer(serializers.HyperlinkedModelSerializer):
@@ -21,4 +21,4 @@ class CommentSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['post', 'author', 'text', 'created_at']
+        fields = ['post', 'author', 'message', 'created_at']
